@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <title>Weather Info</title>
+</head>
+
+<body>
+    <div id="window">
+      <div id="search">
+        <input type="text" id="search-bar" placeholder="Search">
+        <button>
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      <div id="details">
+        <h2 id="city">----------</h2>
+        <h1 id="temperature">-°C</h1>
+        <div id="weather">
+          <img src="https://openweathermap.org/img/wn/04n.png" id="icon" />
+          <div id="description">-------</div>
+        </div>
+        <div id="feelslike">Feels like : --°C</div>
+        <div id="humidity">Humidity: --%</div>
+        <div id="windspeed">Wind speed: --- km/h</div>
+      </div>
+    </div>
+  </body>
+  
+  </html>
