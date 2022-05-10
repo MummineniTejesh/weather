@@ -8,11 +8,14 @@ let weather ={
         .then((data) => this.displayweather(data));
     },
     displayweather:function(data){
+        if(data==""){
+            alert("city not found");
+        }
         const { name } =data;
         const { icon,description }=data.weather[0];
         const { temp,humidity,feels_like } = data.main;
         const { speed } = data.wind;
-        document.querySelector("#city").innerText="Weather in" + name;
+        document.querySelector("#city").innerText="Weather in " + name;
         document.querySelector("#temperature").innerText=temp +"°C";
         document.querySelector("#icon").src="https://openweathermap.org/img/wn/"+ icon +".png";
         document.querySelector("#description").innerText=description;
@@ -24,6 +27,7 @@ let weather ={
         this.fetchweather(document.querySelector("#search-bar").value)
     }
 };
+
 document.querySelector("#search button").addEventListener("click", function(){
     weather.search();
 });
